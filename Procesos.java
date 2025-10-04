@@ -20,9 +20,7 @@ public abstract class Procesos{
         this.nombre = nombre;
     }
 
-    public abstract void ejecutarse(){
-        System.out.println("Proceso Ejecutandose");
-    }
+    public abstract void ejecutarse();
     
     @Override
     public String toString(){

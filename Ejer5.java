@@ -4,11 +4,11 @@ public class Ejer5{
         ControladorProcesos controlador = new ControladorProcesos();
         Scanner scanner = new Scanner(System.in);
 
-        controlador.registrarProceso(1, "Compilador", "CPU");
-        controlador.registrarProceso(2, "Impresora", "Entrada/Salida");
-        controlador.registrarProceso(3, "Antivirus", "Servicio");
-        controlador.registrarProceso(4, "Navegador", "Red");
-        controlador.registrarProceso(5, "Actualizador", "Daemon");
+        controlador.registrar(1, "Compilador", "CPU");
+        controlador.registrar(2, "Impresora", "Entrada/Salida");
+        controlador.registrar(3, "Antivirus", "Servicio");
+        controlador.registrar(4, "Navegador", "Red");
+        controlador.registrar(5, "Actualizador", "Daemons");
 
         boolean salir = false;
         while(!salir){
@@ -22,12 +22,12 @@ public class Ejer5{
 
             switch(opcion){
                 case 1:
-                    for(Procesos proceso : controlador.getProcesos()){
+                    for(Procesos proceso : controlador.getListaProcesos()){
                         System.out.println(proceso);
                     }
                     break;
                 case 2:
-                    controlador.ejecutarTodos();
+                    controlador.ejecutarTodosProcesos();
                     break;
                 case 3:
                     System.out.print("Ingrese PID: ");
