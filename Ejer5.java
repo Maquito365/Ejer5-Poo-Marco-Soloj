@@ -37,7 +37,7 @@ public class Ejer5{
                     String nombre = scanner.nextLine();
                     System.out.print("Ingrese tipo de proceso (CPU, Entrada/Salida, Servicio, Red, Daemon): ");
                     String tipo = scanner.nextLine();
-                    controlador.registrarProceso(PID, nombre, tipo);
+                    controlador.registrar(PID, nombre, tipo);
                     System.out.println("Proceso agregado exitosamente.");
                     break;
                 case 4:
