@@ -26,7 +26,7 @@ public abstract class Procesos{
     
     @Override
     public String toString(){
-        return "PID: " + PID + ", Nombre: " + nombre;
+        return "PID: " + PID + ", Nombre: " + nombre + "Tipo: " + this.getClass().getSimpleName();// getClass().getSimpleName() devuelve el nombre de la clase
     }
 
     @Override

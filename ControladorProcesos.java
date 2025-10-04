@@ -15,22 +15,22 @@ public class ControladorProcesos{
         }
     }
 
-    public void registrar(int PID, String nombre){
-        switch(nombre.toLowerCase()){
+    public void registrar(int PID, String nombre, String tipo){
+        switch(tipo.toLowerCase()){
             case "cpu":
-                registrar(new ProcesosCPU(PID, nombre));
+                agregarProceso(new ProcesosCPU(PID, nombre));
                 break;
             case "entrada/salida":
-                registrar(new PEntradaSalida(PID, nombre));
+                agregarProceso(new PEntradaSalida(PID, nombre));
                 break;
             case "daemons":
-                registrar(new PDaemons(PID, nombre));
+                agregarProceso(new PDaemons(PID, nombre));
                 break;
             case "network":
-                registrar(new PNetwork(PID, nombre));
+                agregarProceso(new PNetwork(PID, nombre));
                 break;
             case "servicio":
-                registrar(new PServicio(PID, nombre));
+                agregarProceso(new PServicio(PID, nombre));
                 break;
             default:
                 System.out.println("Tipo de proceso no reconocido.");
