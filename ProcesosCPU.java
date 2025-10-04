@@ -1,5 +1,5 @@
 public class ProcesosCPU extends Procesos{
-    public CPUProcesos(int PID, String nombre){
+    public ProcesosCPU(int PID, String nombre){
         super(PID, nombre); //Super llama al constructor de la clase padre
     }
 
